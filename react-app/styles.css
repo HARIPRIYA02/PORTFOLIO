@@ -1,0 +1,165 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+    background-color: #333; /* Change background color on hover */
+}
+
+nav ul li a:active {
+    color: #fff; /* Change color on active */
+}
+
+button#toggleSidebar {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Sidebar Styles */
+aside {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+aside ul {
+    padding: 20px;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+aside ul li a:hover {
+    color: #ddd;
+}
+
+/* Section Styles */
+.section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Styles for Different Sections */
+.summary-container {
+    background-color: #f9f9f9;
+}
+
+.education-container {
+    background-color: #e1f5fe;
+}
+
+.skills-container {
+    background-color: #f0f4c3;
+}
+
+.experience-container {
+    background-color: #ffe0b2;
+}
+
+.projects-container {
+    background-color: #b2dfdb;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    button#toggleSidebar {
+        display: block;
+    }
+    
+
+    /* Adjust container width for smaller screens */
+    .container {
+        width: 90%;
+    }
+}
