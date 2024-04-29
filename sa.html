@@ -1,0 +1,37 @@
+sasdimport React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  return (
+    <div>
+      <header>
+        <div className="container">
+          <h1>Hari Priya Muppidi</h1>
+          <nav>
+            <ul>
+              <li><a href="#summary">Summary</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+            </ul>
+          </nav>
+          <button id="toggleSidebar" onClick={toggleSidebar}>☰</button>
+        </div>
+      </header>
+      <main>
+        <aside id="sidebar" className={sidebarOpen ? 'open' : ''}>
+          <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </aside>
